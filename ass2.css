@@ -231,7 +231,108 @@ li{
     font-family: sans-serif;
     width: 70px;
 }
-@media screen and (max-width:700px) {
+.para{
+    font-size: 75px;
+}
+@media screen and (max-width: 480px) {
+    .para{
+        position: relative;
+        right: 80px;
+        font-size: 65px;
+    }
+    .src{
+        width: 400px;
+        height: auto;
+        position: relative;
+        top: -80px;
+        left: -70px;
+    }
+    .circle{ 
+        width: 70%;       
+         position: absolute;
+         top: 470px;
+         left: 20px;
+         height: 400px;  
+    }
+    .energy{
+        position: relative;
+        top: 630px;
+        right: 70px;        
+    }  
+    .energy1{
+        position: relative;
+        top: 610px;
+        right: 70px;  
+    }
+    .sbox1{
+        position: absolute;
+        top: 880px;
+        left: 30px; 
+        
+    }
+    .sbox2{
+        position: absolute;
+        left: 120px;
+        top: 900px;
+    }
+    .sbox3{
+        position: absolute;
+        right: 20px;
+        top: 902px;
+    }  
+    .comments3{
+        position: absolute;
+        top: 620px;
+        left: 50px;
+    }
+    .comments1{
+        display: none;
+    }
+    .icons{      
+        position: absolute;
+        top: 50px;
+        left: 60px;   
+    } 
+    .burger{
+        display: block;
+        position: absolute;
+        right: 30px;  
+        top: 0px;
+    }   
+    ul > li {
+        display: block;
+    }    
+    li{
+        display: block;
+        color: white;  
+        position: relative;    
+        left: -20px;  
+        top: 7px;
+    }
+    ul{
+        position: absolute;
+        background-color: rgb(166, 165, 165);
+        left: 0;
+        right: 10px;
+        top: 70px;
+        text-align: right;
+        clip-path: polygon(100% 0%,100% 0%,100% 100%, 100% 100%);
+        border-radius: 10px;  
+        z-index: 1;      
+    }
+    .clipped{
+        clip-path: polygon(60% 0,100% 0,100% 100%, 60% 100%);
+        border-radius: 10px;
+        transition: 0.5s all;
+    } 
+    .burger:hover{
+        cursor: pointer;
+        border: 2px solid rgb(205, 188, 188);
+        border-radius: 12px;
+    }  
+}
+
+@media screen and (max-width:700px) and (min-width:480px){
     .sbox1{
         position: absolute;
         top: 920px;
