@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ass2.css">
+</head>
+<body>
+    <div class="box">
+        <nav><b>
+            <ul>
+            <li>HOME</li>
+            <li>PRODUCT</li>
+            <li>ABOUT</li>
+            <li>SUPPORT</li>
+        </ul>
+        </b>
+        </nav>
+        <div class="icons">
+            <div class="i1"><img src="search-removebg-preview.png" class="im" alt=""></div>
+            <div class="i2"><img src="shopping-removebg-preview 1.png" alt="" class="ig"></div>
+        </div>
+        <div class="burger">
+            <div class="bug1"><b>__</b></div>
+            <div class="bug2"><b>__</b></div>
+            <div class="bug3"><b>__</b></div>
+        </b></div> 
+        <div class="text">
+            <p style="font-size: 75px;"class="para"><b>Always Be Your Self</b></p>
+            <!-- FOr the media screen -->
+            <div class="energy">
+            <p style="margin-top: -65px; font-size: 26px;" class="parag">
+                <span class="span">Energy</span> <span class="spa">Drink</span></p>
+            <p style="font-size: 26px; margin-top: -20px;"><span class="span">Total Order:                 
+            </span><span><b>$</b></span><span class="price"><b>12.00</b></span></p>
+            </div>
+        </div>
+        <div class="circle">
+            <img src="madcan3-removebg-preview.png" class="src" alt="">
+        </div>
+            <!-- FOr the media screen -->
+        <div class="energy1">  
+        <div class="choose">
+            <p><b>Choose your</b></p>
+            <div class="btn1">
+                <p class="sub">&#60</p>
+            </div>
+            <div class="btn2">
+                <p class="sub">&#62</p>
+            </div>
+            <div class="NO"><b>1</b></div>
+        </div>
+        <div class="buy"><p style="color: white; 
+        font-family: sans-serif; margin-left: 70px;"><b>Buy Now</b></p></div>
+        </div> 
+        <div class="comments1">
+            <p><b>Classic Drinks</b><br>
+               <span class="sp"> For traditionalists who like</span>
+            </p>
+            <p></p>
+        </div>
+        <div class="comments2">
+            <p><b>Best Drinks</b><br>
+                <span class="sp">The things you can order </span>
+             </p>
+             <p></p>
+        </div>
+        <div class="comments3">
+            <span class="sp1"><b>100%</b></span>
+            <p><b>Original <br> Product</b><br>                
+             </p>
+             <p></p>
+        </div>
+        <div class="sbox">
+        <div class="sbox1">
+            <img src="madcan3-removebg-preview.png" alt="" class="src1">
+            <!-- <br> -->
+            <p><b> Click me!</b></p>
+        </div>
+        <!-- second small icon -->
+        <div class="sbox2">
+            <img src="Group_1-removebg-preview.png" alt="" class="src1">
+            <!-- <br> -->
+            <p><b> Click me!</b></p>        
+        </div>
+        <!-- third small icon -->       
+        <div class="sbox3">
+            <img src="madcan1-removebg-preview.png" alt="" class="src1">
+            <!-- <br> -->
+            <p><b> Click me!</b></p>
+        </div>    
+    </div>
+    </div>
+    <!-- JAVASCRIPT -->
+    <script>
+    btn1 = document.querySelector('.sbox1');
+    btn2 = document.querySelector('.sbox2');
+    btn3 = document.querySelector('.sbox3');   
+    btn4 = document.querySelector('.btn1');
+    btn5 = document.querySelector('.btn2');
+    img = document.querySelector('.src');   
+    head = document.querySelector('.parag');
+    para = document.querySelector('.price')
+    num = document.querySelector('.NO');
+    price = document.querySelector('.price');
+    //ARRAY
+    array = [
+        {
+            pic:"madcan3-removebg-preview.png",
+            name:"Energy Drink",
+            amount: "12.00",
+        },
+        {
+            pic:"Group_1-removebg-preview 2.png",
+            name:"Coca-cola",
+            amount:"10.20"
+        },
+        {
+            pic:"madcan1-removebg-preview.png",
+            name:"Chilled soda",
+            amount:"8.57"
+        }
+    ]
+    //DESIGNS
+    document.querySelector(".parag").style.color = "#9ACD32";
+    document.querySelector(".parag").style.fontSize = "30px";
+    document.querySelector(".src").style.marginTop = "30px";
+    document.querySelector(".src").style.marginLeft = "20px";
+
+    //BUTTONS
+    btn1.addEventListener("click", ()=>{
+    img.src = array[0].pic;
+    head.textContent = array[0].name; 
+    para.textContent = array[0].amount;
+    ///////////////////////
+    counter = 1;
+    btn4.addEventListener("click", ()=>{
+    
+    counter++;
+    num.textContent = counter;
+    let ans = counter * array[0].amount;
+    ans1 = ans.toFixed(2) 
+    price.textContent = ans1;
+   })
+   btn5.addEventListener("click", ()=>{
+    // counter = 0;
+    counter--;
+    num.textContent = counter;
+    let ans = counter * array[0].amount;
+    ans1 = ans.toFixed(2) 
+    price.textContent = ans1;
+   })   
+   })
+    //END OF BUTTON1
+   //////////////////////////// 
+   btn2.addEventListener("click", ()=>{
+    img.src = array[1].pic;
+    head.textContent = array[1].name;
+    para.textContent = array[1].amount;
+    //////////////////////////
+    counter = 1;
+    btn4.addEventListener("click", ()=>{       
+    counter++;
+    num.textContent = counter;    
+    let ans = counter * array[1].amount;
+    ans1 = ans.toFixed(2) 
+    price.textContent = ans1;
+   })
+   btn5.addEventListener("click", ()=>{
+    // counter = 0;
+    counter--;
+    num.textContent = counter;
+    let ans = counter * array[1].amount;
+    ans1 = ans.toFixed(2) 
+    price.textContent = ans1;
+   })      
+ 
+   })
+    //END OF BUTTON2
+   //////////////////////////// 
+   btn3.addEventListener("click", ()=>{
+    img.src = array[2].pic;
+    head.textContent = array[2].name;
+    para.textContent = array[2].amount;
+    ////////////////////
+    counter = 1;
+    btn4.addEventListener("click", ()=>{       
+    counter++;
+    num.textContent = counter;    
+    let ans = counter * array[2].amount;
+    ans1 = ans.toFixed(2) 
+    price.textContent = ans1;
+   })
+   btn5.addEventListener("click", ()=>{
+    // counter = 0;
+    counter--;
+    num.textContent = counter;
+    let ans = counter * array[2].amount;
+    ans1 = ans.toFixed(2) 
+    price.textContent = ans1;
+   })      
+   }) 
+    //END OF BUTTON3
+   //////////////////////////// 
+   bn = document.querySelector('.burger')
+        navlist = document.querySelector('ul')
+        bn.addEventListener('click',()=> {
+            navlist.classList.toggle('clipped')
+        })
+   </script>
+</body>
+</html>
