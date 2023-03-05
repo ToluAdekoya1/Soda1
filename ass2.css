@@ -321,7 +321,7 @@ li{
         z-index: 1;      
     }
     .clipped{
-        clip-path: polygon(60% 0,100% 0,100% 100%, 60% 100%);
+        clip-path: polygon(50% 0,100% 0,100% 100%, 50% 100%);
         border-radius: 10px;
         transition: 0.5s all;
     } 
